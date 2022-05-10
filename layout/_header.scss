@@ -34,11 +34,16 @@ header {
                         text-decoration: none;
                         margin-right: 40px;
                     }
+                    &:hover {
+                        transform: scale(1.1);
+                        filter: brightness(200%);
+                    }
                 }
             }
             .hamburger {
                 display: flex;
                 flex-direction: column;
+                cursor: pointer;
                 span {
                     margin: 3px;
                     padding: 1px 12px;
@@ -130,6 +135,13 @@ header {
             opacity: 0;
             transform: translateY(100px);
             transition: 2.5s;
+            cursor: pointer;
+            &:hover {
+                transition: 0.2s;
+                color: $red;
+                background: $white-grey;
+            }
+
             @media screen and (max-width: 540px) {
                 margin-bottom: 40px;
             }
