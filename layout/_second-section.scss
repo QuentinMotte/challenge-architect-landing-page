@@ -1,0 +1,86 @@
+.third-part {
+    display: flex;
+    justify-content: space-between;
+    height: 480px;
+    @media screen and (max-width: 815px) {
+        flex-direction: column;
+        height: 100%;
+    }
+    .third-part-text {
+        margin-top: 80px;
+        margin-left: 120px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: 1.3s;
+        opacity: 0;
+        transform: translateX(-100px);
+        @media screen and (max-width: 815px) {
+            margin-top: 15px;
+            margin-left: 20px;
+        }
+        h4 {
+            color: $red-text;
+            margin-bottom: 15px;
+        }
+        h2 {
+            color: $grey-dark-bg-2;
+            max-width: 470px;
+            font-size: 1.9rem;
+            margin-bottom: 30px;
+            @media screen and (max-width: 935px) {
+                font-size: 1.7rem;
+            }
+        }
+        p {
+            line-height: 27px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: $grey-dark-bg-2;
+            max-width: 360px;
+            margin-bottom: 65px;
+            @media screen and (max-width: 930px) {
+                margin-bottom: 20px;
+            }
+        }
+        button {
+            color: $red-text;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            font-weight: 800;
+            i {
+                color: $red;
+                margin-left: 10px;
+            }
+        }
+    }
+    .third-part-img {
+        position: relative;
+        transition: 1.5s;
+        opacity: 0;
+        transform: translateX(100px);
+        img {
+            height: 480px;
+            width: 450px;
+            z-index: 0;
+            @media screen and (max-width: 815px) {
+                width: 100%;
+            }
+        }
+        button {
+            position: absolute;
+            z-index: 10;
+            left: 0;
+            bottom: 0;
+            background: $red;
+            border: none;
+            height: 75px;
+            width: 75px;
+            cursor: pointer;
+            @media screen and (max-width: 815px) {
+                bottom: 7px;
+            }
+        }
+    }
+}

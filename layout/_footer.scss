@@ -1,0 +1,118 @@
+footer {
+    background: $grey-dark-bg-2;
+    .footer-bg {
+        width: 80%;
+        margin: 0 auto;
+        @media screen and (max-width: 540px) {
+            width: 100%;
+        }
+        .first-part-footer {
+            display: flex;
+            justify-content: space-between;
+            @media screen and (max-width: 540px) {
+                flex-direction: column-reverse;
+            }
+            .footer-text {
+                margin-top: 80px;
+                @media screen and (max-width: 540px) {
+                    margin-top: 20px;
+                    padding-left: 20px;
+                }
+                .text-one {
+                    h2 {
+                        color: $white-grey;
+                        font-size: 1.9rem;
+                        margin-bottom: 25px;
+                    }
+                    p {
+                        color: $white-grey;
+                        font-size: 0.9rem;
+                        line-height: 27px;
+                        width: 350px;
+                        margin-bottom: 25px;
+                    }
+                }
+                .email {
+                    p:nth-child(1) {
+                        color: $white-grey;
+                        margin-bottom: 5px;
+                        font-size: 0.9rem;
+                    }
+                    p:nth-child(2) {
+                        color: $red-text;
+                        margin-bottom: 25px;
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                    }
+                }
+                .phone {
+                    p:nth-child(1) {
+                        color: $white-grey;
+                        margin-bottom: 6px;
+                        font-size: 0.9rem;
+                    }
+                    p:nth-child(2) {
+                        color: $red-text;
+                        margin-bottom: 5px;
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                    }
+                }
+            }
+            .footer-img {
+                position: relative;
+                height: 400px;
+                margin-right: -184px;
+                @media screen and (max-width: 540px) {
+                    margin-right: 0;
+                    width: 100%;
+                }
+                img {
+                    height: 400px;
+                    @media screen and (max-width: 540px) {
+                        width: 100%;
+                    }
+                }
+                button {
+                    position: absolute;
+                    bottom: 0px;
+                    left: 0;
+                    background: $red;
+                    border: none;
+                    height: 75px;
+                    width: 75px;
+                    cursor: pointer;
+                    i {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+        .second-part-footer {
+            height: 250px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: -50px;
+            @media screen and (max-width: 540px) {
+                flex-direction: column-reverse;
+                justify-content: space-evenly;
+            }
+            .social-icons {
+                cursor: pointer;
+                i {
+                    color: $white-grey;
+                    margin-right: 20px;
+                }
+            }
+            .copyright {
+                font-size: 0.9rem;
+                color: $white-grey;
+            }
+            .language {
+                text-transform: uppercase;
+                color: $white-grey;
+            }
+        }
+    }
+}

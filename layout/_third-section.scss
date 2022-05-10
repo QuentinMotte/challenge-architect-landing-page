@@ -1,0 +1,47 @@
+.four-part {
+    @media screen and (max-width: 540px) {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .four-part-img {
+        position: relative;
+        height: 400px;
+        transition: 1.2s;
+        opacity: 0;
+        transform: translateX(-100px);
+        background: url(../img/pexels-gdtography-911758.jpg) center/cover;
+        button {
+            position: absolute;
+            bottom: 0;
+            background: $red;
+            border: none;
+            height: 75px;
+            width: 75px;
+            cursor: pointer;
+        }
+    }
+    .four-part-sponsor {
+        width: 80%;
+        margin: 0 auto;
+        height: 350px;
+        transition: 1.2s;
+        opacity: 0;
+        transform: translateY(100px);
+        @media screen and (max-width: 500px) {
+            height: 450px;
+        }
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        @media screen and (max-width: 775px) {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        @media screen and (max-width: 680px) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        @media screen and (max-width: 500px) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
