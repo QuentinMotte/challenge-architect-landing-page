@@ -17,42 +17,27 @@ const thirteen = document.querySelector(".four-part-img");
 const fourteen = document.querySelector(".four-part-sponsor");
 const fifteen = document.querySelector(".five-part");
 console.log(six);
-document.addEventListener("DOMContentLoaded", () => {
-    nav.style.opacity = 1;
-    nav.style.transform = "translate(0)";
-    first.style.opacity = 1;
-    first.style.transform = "translate(0)";
-    second.style.opacity = 1;
-    second.style.transform = "translate(0)";
-    three.style.opacity = 1;
-    three.style.transform = "translate(0)";
-    four.style.opacity = 1;
-    four.style.transform = "translate(0)";
-    five.style.opacity = 1;
-    five.style.transform = "translate(0)";
+let arrayOne = [nav, first, second, three, four, five];
+let arrayTwo = [six, seven, eight, nine, nineOne, nineTwo, ten];
+
+arrayOne.forEach((item) => {
+    document.addEventListener("DOMContentLoaded", () => {
+        item.style.opacity = 1;
+        item.style.transform = "translate(0)";
+    });
+});
+console.log(arrayTwo);
+arrayTwo.forEach((item) => {
+    window.addEventListener("scroll", () => {
+        let scrollValue =
+            (window.scrollY + window.innerHeight) / document.body.offsetHeight;
+        if (scrollValue > 0.3) {
+            item.style.opacity = 1;
+            item.style.transform = "none";
+        }
+    });
 });
 
-window.addEventListener("scroll", () => {
-    let scrollValue =
-        (window.scrollY + window.innerHeight) / document.body.offsetHeight;
-    console.log(scrollValue);
-    if (scrollValue > 0.3) {
-        six.style.opacity = 1;
-        six.style.transform = "none";
-        seven.style.opacity = 1;
-        seven.style.transform = "translate(0)";
-        eight.style.opacity = 1;
-        eight.style.transform = "translate(0)";
-        nine.style.opacity = 1;
-        nine.style.transform = "translate(0)";
-        nineOne.style.opacity = 1;
-        nineOne.style.transform = "translate(0)";
-        nineTwo.style.opacity = 1;
-        nineTwo.style.transform = "translate(0)";
-        ten.style.opacity = 1;
-        ten.style.transform = "translate(0)";
-    }
-});
 window.addEventListener("scroll", () => {
     let scrollValue =
         (window.scrollY + window.innerHeight) / document.body.offsetHeight;
